@@ -7,6 +7,7 @@ st.header("Mapa de remates de la Copa América 2024")
 st.subheader("Filtrá por selección y luego por jugador para ver sus acciones.")
 st.write("##### Datos de eventing promovidos por StatsBomb de manera gratuita.")
 
+
 df = pd.read_csv("eventos_copa_america_2024.csv")
 df = df[df['type'] == 'Shot'].reset_index(drop=True)
 df['location'] = df['location'].apply(json.loads)
@@ -48,4 +49,5 @@ mapa(datos_filtrados, ax, pitch)
 
 st.pyplot(fig)
 
-st.write("El tamaño de los círculos está determinado por el xG de cada remate \n En verde, los disparos que terminaron en gol. En los mapas están incluidos los penales.")
+st.write("El tamaño de los círculos está determinado por el xG de cada remate \n En verde, los disparos que terminaron en gol. En los mapas están incluidos los penales. Basado en los cursos/videos de McKay Johns.")
+st.write("X: @robaboian_")
