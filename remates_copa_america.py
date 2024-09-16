@@ -27,7 +27,7 @@ def filtro(df, team, player):
 
 datos_filtrados = filtro(df, team, player)
 
-pitch = VerticalPitch(pitch_type='statsbomb', half=True)
+pitch = VerticalPitch(pitch_type='statsbomb', half=True, pad_bottom=0, line_color='black', line_alpha=0.3)
 fig, ax = pitch.draw(figsize=(10, 10))
 
 
